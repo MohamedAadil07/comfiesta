@@ -1,0 +1,616 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+   background-color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img{
+    width: 20%;
+    height: 15%;
+}
+
+nav img:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 20px;
+   
+}
+
+nav ul li a{
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: #40dfed;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #40dfed;
+    margin: auto;
+    display: block;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu-line{
+    height: 3px;
+    width: 20px;
+    background-color: #40dfed;
+    margin: 2px;
+}
+
+.row{
+    margin-top: 20px;
+}
+
+.h2{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 40px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.para {
+    text-align: justify;
+    font-size: 24px;
+    margin-top: 10px;
+    line-height: 1.4;
+    padding-left: 35px;
+    padding-right: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p span{
+    padding-left: 13%;
+    font-size: 24px;
+    
+}
+
+.Events h1{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 45px;
+    margin-top: 20px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.Events-1{
+    text-align: justify;
+    font-size: 25px;
+    margin-top: 10px;
+    line-height: 1.4;
+    padding-left: 35px;
+    padding-right: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#events-1{
+    padding-left: 13%;
+}
+
+.TechnicalEvents{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 37px;
+    margin-top: 20px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.section1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: black;
+    color: #40dfed;
+    justify-content: center;
+    width: 470px;
+    height: 650px;
+    margin: 20px 10px 0 10px ;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 0 black;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+    transition: all 0.3s ease;
+}
+
+@media  screen and (max-width:480){
+    .card{
+        flex-direction: column;
+    }
+}
+
+.card-img-1,.card-img-2,.card-img-3{
+    height: 270px; 
+    width:auto;
+    border-radius: 15px;
+}
+
+.card-img-1{
+    background-image: url('images/codedebugging.jpeg');
+    background-size:cover;
+}
+
+.card-img-2{
+    background-image: url('images/technicalquiz.webp');
+    background-size: cover;
+}
+
+.card-img-3{
+    background-image: url('images/technicalconnection.jpg');
+    background-size: cover;
+    
+}
+
+.section1 h2{
+    font-size: 40px;
+    padding: 20px 0 0 10px;
+}
+
+.section1 .code-debug{
+    font-size: 21px;
+    padding: 20px 10px 0 10px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.section1 #codeDebug{
+    padding-left: 3%;
+}
+
+.section1 .technicalquiz{
+    font-size: 20px;
+    padding: 20px 10px 0 10px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.section1 #quiz{
+    padding-left: 3%;
+}
+.section1 .technicalconnexion{
+    font-size: 20px;
+    padding: 20px 10px 0 10px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.section1 #connexion{
+    padding-left: 3%;
+}
+
+.section1 .register1{
+    color: black;
+    background-color: #40dfed;
+    font-size: larger;
+    text-decoration: none;
+    border: 2px solid #40dfed;
+    border-radius: 20px;
+    width: fit-content;
+    display:block;
+    margin-top: 8%;
+    margin-left: 40%;
+    margin-right: 20px;
+    text-align: center;
+    padding: 10px;
+    }
+
+.section1 .register1:hover{
+    color: #40dfed;
+    background-color: black;
+    transform:translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.section1 .register2{
+    color: black;
+    background-color: #40dfed;
+    font-size: larger;
+    text-decoration: none;
+    border: 2px solid #40dfed;
+    border-radius: 20px;
+    width: fit-content;
+    display:block;
+    margin-top: 3%;
+    margin-left: 40%;
+    text-align: center;
+    padding: 10px;
+    }
+
+.section1 .register2:hover{
+    color: #40dfed;
+    background-color: black;
+    transform:translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.section1 .register3{
+    color: black;
+    background-color: #40dfed;
+    font-size: larger;
+    text-decoration: none;
+    border: 2px solid #40dfed;
+    border-radius: 20px;
+    width: fit-content;
+    display:block;
+    margin-top: 3%;
+    margin-left: 40%;
+    text-align: center;
+    padding: 10px;
+    }
+
+.section1 .register3:hover{
+    color: #40dfed;
+    background-color: black;
+    transform:translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.Non-TechnicalEvents{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.section2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-img-4,.card-img-5,.card-img-6{
+    height: 270px; 
+    width: auto;
+    border-radius: 15px;
+}
+
+.card-img-4{
+    background-image: url('images/freefire.webp');
+    background-size: cover;
+}
+
+.card-img-5{
+    background-image: url('images/bgmi.jpg');
+    background-size: cover;
+}
+
+.card-img-6{
+    background-image: url('images/MiniMilitia1.png');
+    background-size: cover;
+}
+
+.section2 h2{
+    font-size: 40px;
+    padding: 20px 0 0 10px;
+}
+
+.section2 .free-fire,.bgmi,.minimilitia{
+    font-size: 21px;
+    padding: 20px 10px 0 10px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.section2 .register1{
+    color: black;
+    background-color: #40dfed;
+    font-size: larger;
+    text-decoration: none;
+    border: 2px solid #40dfed;
+    border-radius: 20px;
+    width: fit-content;
+    display:block;
+    margin-top: 8%;
+    margin-left: 40%;
+    text-align: center;
+    padding: 10px;
+    }
+
+.section2 .register1:hover{
+    color: #40dfed;
+    background-color: black;
+    transform:translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.section2 .registerbttn{
+    color: black;
+    background-color: #40dfed;
+    font-size: larger;
+    text-decoration: none;
+    border: 2px solid #40dfed;
+    border-radius: 20px;
+    width: fit-content;
+    display:block;
+    margin-top: 2%;
+    margin-left: 40%;
+    text-align: center;
+    padding: 10px;
+}
+
+.section2 .registerbttn:hover{
+    color: #40dfed;
+    background-color: black;
+    transform:translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+@media all and (max-width:830px){
+    nav{
+        flex-direction: column;
+    }
+    .menu-bar{
+        display: none;
+        text-align: center;
+    }
+    img{
+        align-self: flex-start;
+        margin-left: 10px;
+        height: 70px;
+        width: 170px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right: 0%;
+        top: 2%;
+        margin-right: 15px;
+    }
+    .menu-bar.showmenu{
+        display:contents;
+    }
+}
+
+.event-details{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.venueSection{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.venueSection .content{
+    background-image: url('images/cseback.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    width: 95vw;
+    height: 100vh;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: rgb(193, 233, 238);
+    padding-left: 20px;
+}
+
+.venueSection h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    padding-top: 14vh;
+}
+
+.venueSection p{
+    padding:20px 0 0 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 37px;
+    font-weight: bolder;
+}
+
+.venueSection .Hoisted{
+    margin-top: 7%;
+    font-size: 50px;
+}
+
+.venueSection .convenor{
+    padding-left: 10px;
+    margin-top: 45px;
+    font-size: 50px;
+    font-style:italic;
+}
+
+.co-ordinator-heading{
+    font-family: 'Borel', cursive;
+    padding-left: 25px;
+    font-size: 40px;
+    margin-top: 40px;
+    color: #40dfed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.technicalEventsIncharge{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.inchargeList{
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.co-ordinator{
+    justify-content: center;
+    width: 350px;
+    height: 500px;
+    margin: 20px 10px 0 10px ;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inchargeList .img-1,.img-2,.img-3{
+    height: auto; 
+    width: auto;
+}
+
+.inchargeList img{
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 40px 0px black;
+}
+
+.co-ordinator a{
+    font-size: 20px;
+}
+
+.co-ordinator p{
+    margin-top: 10px;
+}
+
+.go-top img{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: none;
+}
+
+.footer .footerContainer{
+    margin-top: 4% ;
+    height: 50vh;
+    width: 99vw;
+    background-color: black;
+    display: flex;
+}
+
+.footer-contents{
+    width: 400px;
+    margin-top: 3%;
+    margin-left: 18%;
+    margin-right: 13%;
+}
+
+.footer img{
+    width: 45%;
+    height: auto;
+    margin: 3% 0 0 11%;
+}
+
+.footer a{
+    color: #40dfed;
+    margin: 10% 0 3% 3%;
+    text-decoration:none;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-contents .total-content-img1{
+    display: flex;
+    width: 100%;
+}
+
+.footer-contents .total-content-img1 img{
+    width: 45px;
+    margin: 20px 0 0 45px;
+    height: auto;
+}
+
+.footer-contents .total-content-img1 .content-img1{
+    margin: 25px 0 0 15px;
+    width: 250px;
+}
+
+.footer-contents .total-content-img2{
+    display: flex;
+    width: 100%;
+}
+
+.footer-contents .total-content-img2 img{
+    width: 45px;
+    margin: 30px 0 0 45px;
+    height: auto;
+}
+
+.footer-contents .total-content-img2 .content-img2{
+    margin: 37px 0 0 15px;
+    width: 250px;
+}
+
+.social{
+    width: 50px;
+    margin-top: 3%;
+}
+
+.social img{
+    width: 50px;
+    height: auto;
+}
+
+.social a{
+    font-size: 40px;
+    margin: 50% 30% 0 0%;
+}
+
+.social p{
+    color: #40dfed;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.social .div{
+    width: 100px;
+    display: flex;
+}
+
