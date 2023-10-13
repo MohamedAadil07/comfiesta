@@ -15,6 +15,9 @@
                 <li><a href="#Non-Technical">Non-Technical events</a></li>
                 <li><a href="#eventDetails">Event details</a></li>
             </ul>
+            <div class="theme-img">
+                <img src="images/moon.png">
+            </div>
             <div class="menu" onclick="myFunction()">
                 <div class="menu-line"></div>
                 <div class="menu-line"></div>
@@ -24,15 +27,15 @@
     </div>
     <div class="row">
         <div class="col-1">
-            <h2 class="h2" id="comfiesta">COMFIESTA 2K23</h2>
-            <p class="para"><span>Comfiesta</span> 2k23 promises to be an exceptional symposium, offering a platform for learning and Enjoying in
+            <h2 class="h2 anim" id="comfiesta">COMFIESTA 2K23</h2>
+            <p class="para anim"><span>Comfiesta</span> 2k23 promises to be an exceptional symposium, offering a platform for learning and Enjoying in
                  the field of computer science. Hosted by <strong> "the Department of Computer Science at Rajiv Gandhi College of Engineering and technology"</strong>, 
                  this event is a must-attend for students, and professionals passionate about technology and its ever-evolving 
                  landscape. Make sure to mark your calendar for September 22, 2023, and join us for a day filled with knowledge, inspiration, and 
                  fun at Comfiesta 2k23!</p>
         </div>
     </div>
-    <div class="Events">
+    <div class="Events anim">
         <h1>Events</h1>
         <p class="Events-1"><span id="events-1">The</span> college symposium will provide a diverse range of opportunities for students to learn, showcase their talents, and
          engage in friendly competition. It's a platform that encourages both technical and non-technical skill development and fosters creativity 
@@ -49,7 +52,7 @@
             <p class="code-debug"><span id="codeDebug">Debugging</span> is a crucial part of software development. It involves identifying and fixing errors or bugs in our 
                 code to make it work correctly. Debugging is often a systematic process, and it may take some time to locate and fix the issue. 
                 Patience and persistence are key.</p>
-            <a href="" class="register1">Register</a>
+            <a class="register1">Register</a>
         </div>
         <div class="card technicalQuiz">
             <div class="card-img-2">
@@ -58,7 +61,7 @@
             <p class="technicalquiz"><span id="quiz">Technical</span> quiz is designed to test your knowledge of various technical topics, from 
                 computer science and programming to networking and web development. Whether you're a seasoned tech professional or just getting 
                 started on your technical journey, this quiz will challenge your understanding and may even teach you something new.</p>
-            <a href="" class="register2">Register</a>
+            <a class="register2">Register</a>
         </div>
         <div class="card technicalConnection">
             <div class="card-img-3">
@@ -67,7 +70,7 @@
             <p class="technicalconnexion"><span id="connexion">In</span> today's interconnected world, understanding how different technologies and
                  systems communicate and work together is essential.  Whether you're an experienced or just curious about the technical underpinnings 
                  of our interconnected world, we hope this session will provide valuable insights and deepen your understanding of the digital ecosystem.</p>
-                 <a href="" class="register3">Register</a>
+                 <a class="register3">Register</a>
         </div>
     </div>
     <div id="Non-Technical" class="Non-TechnicalEvents">
@@ -81,7 +84,7 @@
             <p class="free-fire"><span id="freeFire">Welcome</span> to the adrenaline-fueled battleground of Free Fire! Free Fire is a popular battle royale mobile game developed by 111 Dots 
                 Studio and published by Garena. With millions of players worldwide, it has become one of the most exciting and accessible battle 
                 royale games available on mobile platforms.</p>
-                <a href="" class="registerbttn">Register</a>
+                <a class="registerbttn">Register</a>
         </div>
         <div class="card BGMI">
             <div class="card-img-5">
@@ -90,7 +93,7 @@
             <p class="bgmi"><span id="pubg">BGMI</span> is a highly anticipated mobile battle royale game developed and published by Krafton, Inc.
                  BGMI offers a thrilling and immersive battle royale experience designed specifically for mobile devices. If you enjoy fast-paced 
                  battle royale action on your mobile device, BGMI is definitely worthy!</p>
-                 <a href="" class="register1">Register</a>
+                 <a class="register1">Register</a>
         </div>
         <div class="card MiniMilitia">
             <div class="card-img-6">
@@ -99,7 +102,7 @@
             <p class="minimilitia"><span id="mini-militia">Mini</span> Militia, also known as "Doodle Army 2," is a popular 2D multiplayer shooter 
                 game for mobile devices. It was developed by Appsomniacs LLC and has gained a significant following for its fast-paced, action-
                 packed gameplay that brings intense combat to the palm of your hand.</p>
-                <a href="" class="register1">Register</a>
+                <a class="register1">Register</a>
         </div>
     </div>
     <div id="eventDetails" class="event-details">
@@ -179,7 +182,7 @@
         </div>
         <div class="co-ordinator">
             <div class="img-3">
-                <img src="images/abdullah.png.jpg" alt="">
+                <img src="images/abdullah.png.jpg">
             </div>
             <a>Abdullah</a>
             <p>Event: Mini Militia <br>
@@ -233,11 +236,14 @@
     </div>
 </body>
 <script>
+    
+    //RESPONSIVE NAV-BAR
     function myFunction() {
     const menu = document.querySelector('.menu-bar');
     menu.classList.toggle('showmenu');
     }
 
+    //GO-TO-TOP-BUTTON
     const goTopBtn=document.querySelector('.go-top img')
     window.addEventListener('scroll', checkPixels)
     function checkPixels(){
@@ -249,5 +255,29 @@
             goTopBtn.style.display= "none";
         }
     } 
+
+    //HOVER EFFECT ON REGISTER BUTTON
+    let Register = document.querySelector(".register1")
+
+    Register.addEventListener("mouseover",mouseOver)
+    Register.addEventListener("mouseout",mouseOut)
+    Register.addEventListener("click",mouseClick)
+
+    function mouseOver(){
+        Register.textContent="Register now!";
+    }
+
+    function mouseOut(){
+        Register.textContent="Register";   
+    }
+
+    function mouseClick(){
+        Register.textContent="I'm Clicked!";  
+
+        setTimeout(() => {
+            Register.textContent="Register";
+        }, 5000);
+    }
+
 </script>
 </html>
